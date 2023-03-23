@@ -44,4 +44,4 @@ Route::get('/', function () {
 // Allow users to create, view and edit blog posts
 Route::get('/post/{id}', function () {
     return view('post_form');
-})->name('post-form');
+})->middleware(['auth', 'verified'])->name('post-form');
