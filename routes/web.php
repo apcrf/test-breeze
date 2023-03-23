@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,3 +29,19 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+/*
+|--------------------------------------------------------------------------
+| Posts - Frontend
+|--------------------------------------------------------------------------
+*/
+
+// Display a list of all blog posts, with pagination.
+Route::get('/', function () {
+    return view('post_list');
+})->name('post-list');
+
+// Allow users to create, view and edit blog posts
+Route::get('/post/{id}', function () {
+    return view('post_form');
+})->name('post-form');
