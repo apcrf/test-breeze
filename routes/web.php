@@ -39,7 +39,7 @@ require __DIR__.'/auth.php';
 // Display a list of all blog posts, with pagination.
 Route::get('/', function () {
     return view('post_list');
-})->name('post-list');
+})->middleware(['auth', 'verified'])->name('post-list');
 
 // Allow users to create, view and edit blog posts
 Route::get('/post/{id}', function () {
