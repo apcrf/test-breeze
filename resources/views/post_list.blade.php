@@ -3,6 +3,9 @@
 	<x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
 			Blog Posts
+			<button type="button" style="float: right;" class="rounded-full text-white bg-lime-500 px-3" name="btnAdd" onclick="location.href='/post/0'">
+				Add Blog Post
+			</button>
         </h2>
     </x-slot>
 
