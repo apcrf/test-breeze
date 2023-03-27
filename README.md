@@ -1,6 +1,11 @@
 
 DEMO: http://test-breeze.trevdo.com/
 
+Login: test@example.com  
+Password: 12345678  
+or You can register new user:
+https://test-breeze.trevdo.com/register  
+
 ## Laravel
 ## jQuery
 
